@@ -1,0 +1,96 @@
+.b-items {
+    .items__items {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .items__item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 3rem;
+        flex: none;
+        width: 100%;
+
+        @media (min-width: $breakpoint-mobile-extra) {
+            width: 50%;
+        }
+        @media (min-width: $breakpoint-tablet) {
+            margin-bottom: 4.5rem;
+        }
+        @media (min-width: $breakpoint-tablet-extra) {
+            width: 33.33%;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-bottom: 5.5rem;
+            width: auto;
+        }
+    }
+    .items__pic {
+        margin-bottom: 1.8rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transform: scale(1);
+            transition: transform 1s ease-in-out;
+            will-change: transform;
+        }
+    }
+    .items__item:hover {
+        .items__pic {
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+    .items__title {
+        margin-bottom: 0.5rem;
+        line-height: 1.05;
+
+        a,
+        a:hover {
+            background: none;
+            text-decoration: none;
+            font-weight: 500;  
+            font-size: 2.2rem;
+            color: $color-black;
+        }
+        a:hover {
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, $color-yellow 0%, $color-yellow 70%, rgba(255,255,255,0) 50%);
+        }
+    }
+    .items__desc {
+        margin-bottom: 0.5rem;
+        font-size: 1.8rem;
+    }
+    .items__price {
+        font-size: 2.2rem;
+        font-weight: bold;
+
+        sup {
+            font-size: 0.6em;
+        }
+    }
+
+    &--3 {
+        .items__item {
+            @media (min-width: $breakpoint-desktop) {
+                width: 33.33%;
+            }
+        }
+    }
+    &--4 {
+        .items__item {
+            @media (min-width: $breakpoint-desktop) {
+                width: 25%;
+            }
+        }
+    }
+    &--catalog {
+        padding-bottom: 7.5rem;
+        margin-bottom: 12.5rem;
+        border-bottom: 1px solid #e5e5e5;
+    }
+}

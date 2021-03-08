@@ -1,0 +1,58 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html * {
+    max-height: 999999px;
+}
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-family: $font-family;
+    line-height: 1.5;
+    font-weight: normal;
+    font-size: 2rem;
+    color: $color-black;
+    -webkit-backface-visibility: hidden;
+}
+sup {
+    vertical-align: super;
+    line-height: 0;
+}
+h1, .h1 {
+    margin-bottom: 0.75em;
+    font-family: $font-family;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 7rem;
+    color: $color-black;
+}
+h2, .h2 {
+    margin-bottom: 0.75em;
+    font-family: $font-family;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 5rem;
+    color: $color-black;
+}
+h3, .h3 {
+    margin-bottom: 0.75em;
+    font-family: $font-family;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 4.2rem;
+    color: $color-black;
+}
+h3, .h3 {
+    margin-bottom: 0.75em;
+    font-family: $font-family;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: $color-black;
+}
