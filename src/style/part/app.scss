@@ -1,6 +1,14 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+::selection {
+    background:$color-yellow;
+    color: $color-black;
+  }
+  ::-moz-selection {
+    background: $color-yellow;
+    color: $color-black;
+  }
 html * {
     max-height: 999999px;
 }

@@ -116,6 +116,8 @@ const watch = () => {
     gulp.watch(path.watch.js, scripts)
 }
 
+
+exports.imagesDev = series(imagesDev);
 // dev task
 exports.dev = series(
     cleanBuild,
