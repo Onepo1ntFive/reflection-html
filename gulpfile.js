@@ -16,6 +16,7 @@ const gulp = require('gulp'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload,
     imagemin = require('gulp-imagemin'),
+    concat = require('gulp-concat'),
     imageresize = require('gulp-image-resize');
 
 
@@ -29,7 +30,7 @@ const path = {
     },
     src: { // исходные файлы
         html: 'src/*.html',
-        js: 'src/js/main.js',
+        js: 'src/js/**/*.js',
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -44,12 +45,11 @@ const path = {
     clean: './build'
 }
 
-
 const cleanBuild = (cb) => {
     return rimraf(path.clean, cb);
 }
 
-// dev task
+// dev tasks
 const server = () => {
     return browserSync
         .init({
@@ -81,12 +81,15 @@ const styles = () => {
 }
 
 const scripts = () => {
-    return gulp.src(path.src.js)
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
+    return gulp
+        .src(path.src.js)
+        // .pipe(babel({
+        //     presets: ['@babel/env']
+        // }))
         // .pipe(uglify())
-        // .pipe(concat('main.min.js'))
+        .pipe(sourcemaps.init())
+        .pipe(concat('main.js'))
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream: true }));
 }
