@@ -2,6 +2,6 @@
 
 (function() {
 
-    console.log('ready')
+    console.log('main.js')
 
 })();
