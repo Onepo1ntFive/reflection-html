@@ -74,6 +74,13 @@
         }
     }
 
+    &--1 {
+        .items__item {
+            @media (min-width: $breakpoint-desktop) {
+                width: 100%;
+            }
+        }
+    }
     &--3 {
         .items__item {
             @media (min-width: $breakpoint-desktop) {
@@ -92,5 +99,98 @@
         padding-bottom: 7.5rem;
         margin-bottom: 12.5rem;
         border-bottom: 1px solid #e5e5e5;
+    }
+    &--sale {
+        .items__item {
+            margin-bottom: 3rem;
+            padding: 0;
+            border: 1px solid $color-gray;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .items__pic {
+            margin-bottom: 0;
+            
+            @media (min-width: $breakpoint-desktop) {
+                margin-right: 5rem;
+                border-radius: 0;
+                margin-bottom: 0;
+                float: left;
+            }
+        }
+        .items__title,
+        .items__desc {
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            @media (min-width: $breakpoint-desktop) {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+            @media (min-width: $breakpoint-desktop) {
+                padding-left: 0;
+            }
+        }
+        .items__title {
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+
+            @media (min-width: $breakpoint-desktop) {
+                padding-top: 5rem;
+            }
+
+            a {
+                font-size: 2.4rem;
+            }
+        }
+        .items__more {
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+            line-height: 1;
+    
+            @media (min-width: $breakpoint-desktop) {
+                padding-bottom: 5rem;
+            }
+            
+            a {
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                font-weight: 500;
+                color: $color-black;
+    
+                &::before,
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &::before {
+                    border-radius: 1000px;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    left: calc(100% + 1.7rem);
+                    background-color: $color-yellow;
+                }
+                &::after {
+                    background: url('../img/arrow-right.svg') 50% 50% no-repeat;
+                    background-size: 100% auto;
+                    width: 2.6rem;
+                    height: 1.6rem;
+                    left: calc(100% + 1rem);
+                    transition: left .2s ease-in-out;
+                }
+            }
+            a:hover {
+                text-decoration: none;
+    
+                &::after {
+                    left: calc(100% + 1.5rem);
+                }
+            }
+        }
     }
 }

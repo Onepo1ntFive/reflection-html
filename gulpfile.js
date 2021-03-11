@@ -121,7 +121,7 @@ const watch = () => {
 }
 
 // help tasks
-exports.imagesDev = series(imagesDev);
+exports.imagesDev = series(imagesDev, imagesWebp);
 
 // dev task
 exports.dev = series(

@@ -1,16 +1,14 @@
 .l-header {
-    margin-bottom: 3rem;
     padding: 2rem 1.5rem 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../img/head-bg.jpg') 50% 0 no-repeat;
+    background-size: auto, 100% auto;
     position: relative;
     z-index: 1;
 
     @media (min-width: $breakpoint-tablet) {
-        margin-bottom: 5rem;
         padding: 2rem 5rem 0;
     }
     @media (min-width: $breakpoint-desktop) {
-        margin-bottom: 7rem;
         padding-top: 3rem;
     }
 
@@ -22,6 +20,10 @@
         margin-right: auto;
         margin-bottom: 2.5rem;
         max-width: 1280px;
+    }
+
+    &--main {
+        background-size: auto, cover;
     }
 }
 /*---------*/

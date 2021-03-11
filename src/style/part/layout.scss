@@ -12,9 +12,20 @@
 /*----------*/
 .l-content {
     margin: auto;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
     max-width: 1380px;
     width: 100%;
     flex: 1 auto;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
 
     .content__wrap {
         padding-left: 2rem;
