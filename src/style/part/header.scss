@@ -1,13 +1,13 @@
 .l-header {
     margin-bottom: 3rem;
-    padding: 1.5rem 2rem;
+    padding: 2rem 1.5rem 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../img/head-bg.jpg') 50% 0 no-repeat;
     position: relative;
     z-index: 1;
 
     @media (min-width: $breakpoint-tablet) {
         margin-bottom: 5rem;
-        padding: 2rem 5rem;
+        padding: 2rem 5rem 0;
     }
     @media (min-width: $breakpoint-desktop) {
         margin-bottom: 7rem;
@@ -20,12 +20,13 @@
     h1 {
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 2.5rem;
         max-width: 1280px;
     }
 }
 /*---------*/
 .b-header {
-    margin: auto;
+    margin: 0 auto 2rem;
     display: flex;
     flex-flow: row wrap;
     border-radius: 5px;
@@ -54,6 +55,7 @@
         order: 2;
         justify-self: start;
         background-color: $color-white;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         display: none;
 
         @media (min-width: $breakpoint-desktop) {
@@ -194,46 +196,6 @@
     }
     .promo__adress {
         margin-bottom: 2rem;
-    }
-}
-/*---------*/
-.b-breadcrumbs {
-    margin: auto;
-    padding-top: 2rem;
-    max-width: 1280px;
-    display: flex;
-    flex-flow: row nowrap;
-    white-space: nowrap;
-    justify-content: flex-end;
-
-    @media (min-width: $breakpoint-tablet) {
-        justify-content: flex-start;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 1.8rem;
-        color: $color-white;
-
-        &::after {
-            content: '/';
-            display: inline-block;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        &:last-child {
-            opacity: 0.5;
-
-            &::after {
-                display: none;
-            }
-        }
-
-        
-    }
-    a:hover {
-        text-decoration: none;
     }
 }
 /*---------*/

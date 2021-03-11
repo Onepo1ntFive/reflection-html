@@ -1,0 +1,45 @@
+.b-breadcrumbs {
+    margin: auto;
+    padding-bottom: 2rem;
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row nowrap;
+    white-space: nowrap;
+    justify-content: flex-end;
+
+    @media (min-width: $breakpoint-tablet) {
+        justify-content: flex-start;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: $color-white;
+        transition-property: opacity, color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+
+        &::after {
+            content: '/';
+            display: inline-block;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            color: $color-white;
+        }
+
+        &:last-child {
+            opacity: 0.5;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        
+    }
+    a:hover {
+        text-decoration: none;
+        color: $color-yellow;
+        opacity: 1;
+    }
+}
