@@ -910,6 +910,10 @@ h3, .h3 {
     font-size: 0.6em; }
 
 @media (min-width: 1200px) {
+  .b-items--1 .items__item {
+    width: 100%; } }
+
+@media (min-width: 1200px) {
   .b-items--3 .items__item {
     width: 33.33%; } }
 
@@ -921,6 +925,22 @@ h3, .h3 {
   padding-bottom: 7.5rem;
   margin-bottom: 12.5rem;
   border-bottom: 1px solid #e5e5e5; }
+
+.b-items--sale .items__item {
+  margin-bottom: 3rem;
+  padding: 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  overflow: hidden; }
+
+.b-items--sale .items__pic {
+  margin-right: 5rem;
+  border-radius: 0;
+  margin-bottom: 0;
+  float: left; }
+
+.b-items--sale .items__title {
+  padding-top: 5rem; }
 
 .b-benefits .benefits__items {
   margin-left: -2.5rem;
