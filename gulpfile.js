@@ -17,7 +17,8 @@ const gulp = require('gulp'),
     reload = browserSync.reload,
     imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
-    imageresize = require('gulp-image-resize');
+    imageresize = require('gulp-image-resize'),
+    ghPages = require('gulp-gh-pages');
 
 
 const path = {
@@ -119,11 +120,20 @@ const watch = () => {
     gulp.watch(path.watch.js, scripts)
 }
 
-
+// help tasks
 exports.imagesDev = series(imagesDev);
+
 // dev task
 exports.dev = series(
     cleanBuild,
     parallel(html, styles, scripts, fonts, imagesDev, imagesWebp),
     parallel(watch, server)
 )
+
+// deploy
+const deploy = () => {
+    return gulp.src('./build/**/*')
+    .pipe(ghPages());
+}
+
+exports.deploy = series(deploy);
