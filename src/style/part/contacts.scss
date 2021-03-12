@@ -1,0 +1,52 @@
+.b-contacts {
+    margin: 0 -2rem 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .contacts__item {
+        padding-bottom: 4rem;
+        width: 100%;
+        text-align: center;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 50%;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            padding-bottom: 0;
+            justify-content: space-between;
+            width: 20%;
+        }
+
+        &--phone {
+            a, a:hover {
+                text-decoration: none;
+                color: $color-black;
+            }
+        }
+        &--social {
+            img {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            a {
+                transition: opacity 0.2s ease-in-out;
+            }
+            a:hover {
+                opacity: 0.75;
+            }
+        }
+        &--email {
+            a {
+                border-bottom: 1px solid $color-black;
+                text-decoration: none;
+                transition: border-color 0.2s ease-in-out;
+                color: $color-black
+            }
+            a:hover {
+                text-decoration: none;
+                border-bottom-color: transparent;
+            }
+        }
+    }
+}

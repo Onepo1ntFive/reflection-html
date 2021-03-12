@@ -7,7 +7,7 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
     input {
-        padding: 1rem;
+        padding: 2rem 1rem;
         border: 0;
         border-radius: 4px;
         font-size: 2rem;
@@ -67,6 +67,8 @@
         }
     }
     .callback-form__content {
+        line-height: 1.2;
+        
         input {
             margin-left: auto;
             width: 6rem;
@@ -126,11 +128,9 @@
         }
     }
 
-    &--map {
-        max-width: 410px;
-
-        @media (min-width: $breakpoint-desktop) {
-            max-width: 820px;
+    &--ver {
+        .callback-form__col {
+            width: 100%;
         }
     }
     
