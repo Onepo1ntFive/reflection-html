@@ -1013,6 +1013,24 @@ h3, .h3 {
     .b-items--sale .items__more a:hover::after {
       left: calc(100% + 1.5rem); }
 
+.b-detail {
+  display: flex;
+  flex-flow: row wrap; }
+  @media (min-width: 1200px) {
+    .b-detail {
+      flex-wrap: nowrap; } }
+  .b-detail .detail__wrap {
+    flex: 1 auto; }
+    @media (min-width: 1200px) {
+      .b-detail .detail__wrap {
+        padding-right: 10rem; } }
+  .b-detail .detail__col {
+    flex: 1 auto; }
+    @media (min-width: 1200px) {
+      .b-detail .detail__col {
+        flex: none;
+        width: 41rem; } }
+
 .b-benefits .benefits__items {
   margin-left: -2.5rem;
   margin-right: -2.5rem;
