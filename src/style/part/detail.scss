@@ -1,0 +1,24 @@
+.b-detail {
+    display: flex;
+    flex-flow: row wrap;
+
+    @media (min-width: $breakpoint-desktop) {
+        flex-wrap: nowrap;
+    }
+
+    .detail__wrap {
+        flex: 1 auto;
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-right: 10rem;
+        }
+    }   
+    .detail__col {
+        flex: 1 auto;
+        
+        @media (min-width: $breakpoint-desktop) {
+            flex: none;
+            width: 41rem;
+        }
+    }   
+}
