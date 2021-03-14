@@ -3,21 +3,15 @@
 const gulp = require('gulp'),
     { series, parallel } = gulp,
     babel = require('gulp-babel'),
-    // watch = require('gulp-watch'),
-    prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
-    cssmin = require('gulp-minify-css'),
     webp = require('gulp-webp'),
-    pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload,
-    imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
-    imageresize = require('gulp-image-resize'),
     ghPages = require('gulp-gh-pages');
 
 const path = {
@@ -74,7 +68,7 @@ const styles = () => {
     return gulp
         .src(path.src.style)
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(path.build.style))
         .pipe(reload({ stream: true }));
@@ -83,10 +77,10 @@ const styles = () => {
 const scripts = () => {
     return gulp
         .src(path.src.js)
-        // .pipe(babel({
-        //     presets: ['@babel/env']
-        // }))
-        // .pipe(uglify())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('./maps'))
