@@ -73,6 +73,12 @@
             font-size: 0.6em;
         }
     }
+    .items__more {
+        a {
+            width: 100%;
+            text-align: center;
+        }
+    }
 
     &--1 {
         .items__item {
@@ -195,10 +201,6 @@
         padding-top: 3rem;
 
         @media (min-width: $breakpoint-tablet) {
-            margin-top: 5rem;
-            padding-top: 5rem;
-        }
-        @media (min-width: $breakpoint-desktop) {
             margin-top: 10rem;
             padding-top: 10rem;
         }

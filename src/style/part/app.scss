@@ -76,3 +76,19 @@ h3, .h3 {
     font-size: 2.4rem;
     color: $color-black;
 }
+/*----------*/
+@media (max-width: calc($breakpoint-tablet - 1px)) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+@media (max-width: $breakpoint-desktop) {
+    .hide-on-deskop {
+        display: none;
+    }
+}
