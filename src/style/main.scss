@@ -1,3 +1,5 @@
+@import "./part/swiper-bundle.min.scss";
+
 @import "./part/var.scss";
 @import "./part/reset.scss";
 @import "./part/fonts.scss";
@@ -12,6 +14,8 @@
 @import "./part/breadcrumbs.scss";
 @import "./part/items.scss";
 @import "./part/detail.scss";
+@import "./part/main-carousel.scss";
+@import "./part/detail-carousel.scss";
 @import "./part/benefits.scss";
 @import "./part/map.scss";
 @import "./part/contacts.scss";

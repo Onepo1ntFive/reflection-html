@@ -7,10 +7,16 @@
     }
 
     .detail__wrap {
+        padding-bottom: 3rem;
         flex: 1 auto;
+        overflow: hidden;
 
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 5rem;
+        }
         @media (min-width: $breakpoint-desktop) {
-            padding-right: 10rem;
+            padding-bottom: 0;
+            padding-right: 11rem;
         }
     }   
     .detail__col {
@@ -18,7 +24,69 @@
         
         @media (min-width: $breakpoint-desktop) {
             flex: none;
-            width: 41rem;
+            width: 42rem;
         }
     }   
+    .detail__header,
+    .detail__gallery {
+        margin-bottom: 5rem;
+    }
+    .detail__header {
+        h1 {
+            margin-bottom: 0.5em;
+        }
+    }
+    .detail__content {
+        p {
+            margin-bottom: 1em;
+        }
+        ul {
+            margin-left: 0;
+            margin-bottom: 1em;
+            padding-left: 0;
+
+            li {
+                margin-bottom: 1em;
+                position: relative;
+                padding-left: 3rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0.5em;
+                    border-radius: 1rem;
+                    display: inline-block;
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: $color-yellow;
+                }
+            }
+        }
+    }
+    
+    & + .b-benefits {
+        position: relative;
+        margin-top: 3rem;
+        padding-top: 3rem;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 5rem;
+            padding-top: 5rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-top: 10rem;
+            padding-top: 10rem;
+        }
+
+        &::before {
+            content: '';
+            margin-left: -500%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1000%;
+            border-bottom: 1px solid $color-gray;
+        }
+    }
 }
