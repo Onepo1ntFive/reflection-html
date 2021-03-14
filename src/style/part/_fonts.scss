@@ -76,4 +76,28 @@
     font-weight: 900;
     font-style: italic;
 }
-
+/*----------*/
+@font-face {
+    font-family: 'ALSRubl';
+    src: url('../fonts/alsrubl-arial-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ALSRubl';
+    src: url('../fonts/alsrubl-arial-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'ALSRubl';
+    src: url('../fonts/alsrubl-arial-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ALSRubl';
+    src: url('../fonts/alsrubl-arial-bolditalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}

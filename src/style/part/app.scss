@@ -77,6 +77,10 @@ h3, .h3 {
     color: $color-black;
 }
 /*----------*/
+.b-ruble-fornt {
+    font-family: $font-family-ruble;
+}
+/*----------*/
 @media (max-width: calc($breakpoint-tablet - 1px)) {
     .hide-on-mobile {
         display: none;
