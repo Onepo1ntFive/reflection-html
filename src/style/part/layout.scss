@@ -8,6 +8,70 @@
 }
 /*----------*/
 .l-header {
+    padding: 2rem 1.5rem 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../img/head-bg.jpg') 50% 0 no-repeat;
+    background-size: auto, 100% auto;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: 2rem 5rem 0;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-top: 3rem;
+    }
+
+    h1, h2, h3, h4 {
+        color: $color-white;
+    }
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2.5rem;
+        max-width: 1280px;
+    }
+
+    &--main {
+        padding-bottom: 10rem;
+        background-size: auto, cover;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 20rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            padding-bottom: 13rem;
+        }
+    }
+    
+    & + .l-carousel {
+        margin-top: -7.5rem;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: -14rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-top: -6.5rem;
+        }
+    }
+}
+/*----------*/
+.l-carousel {
+    position: relative;
+    z-index: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @media (min-width: $breakpoint-desktop) {}
+
+    .carousel__wrap {
+        margin: auto;
+        max-width: 1280px;
+        width: 100%;
+    }
 }
 /*----------*/
 .l-content {
@@ -32,13 +96,8 @@
         margin: auto;
         max-width: 1280px;
         width: 100%;
-
-        @media (min-width: $breakpoint-tablet) {
-           
-        }
     }
 }
 /*----------*/
-.l-footer {
-}
+.l-footer {}
 /*----------*/

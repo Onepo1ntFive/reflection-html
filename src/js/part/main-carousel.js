@@ -1,32 +1,32 @@
 (function () {
-    const swiperMainOptions = {
+    const swiperSaleOptions = {
         autoplay: {
             delay: 5000,
         },
         speed: 1000,
         lazy: true,
-        slidesPerView: 1,
-        spaceBetween: 50,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        navigation: false,
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            1200: {
+              slidesPerView: 4,
+            }
+        }
     };
 
-    let windowWitdh = window.innerWidth;
+    const swiperSaleSelector = document.querySelectorAll('.js-swiper-sale');
 
-    if (windowWitdh >= 1200) {
-        swiperMainOptions.parallax = true;
-    }
-
-    const swiperMainSelector = document.querySelectorAll('.js-swiper-main');
-
-    Array.prototype.forEach.call(swiperMainSelector, function(el, i){
-        let swiperMain = new Swiper(el, swiperMainOptions);
+    Array.prototype.forEach.call(swiperSaleSelector, function(el, i){
+        let swiperSale = new Swiper(el, swiperSaleOptions);
     });
 
     

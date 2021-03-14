@@ -49,8 +49,7 @@
         margin-bottom: 0.5rem;
         line-height: 1.05;
 
-        a,
-        a:hover {
+        a {
             background: none;
             text-decoration: none;
             font-weight: 500;  
@@ -58,6 +57,7 @@
             color: $color-black;
         }
         a:hover {
+            text-decoration: none;
             background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, $color-yellow 0%, $color-yellow 70%, rgba(255,255,255,0) 50%);
         }
     }
@@ -73,7 +73,7 @@
             font-size: 0.6em;
         }
     }
-    .items__more {
+    .items__load {
         a {
             width: 100%;
             text-align: center;
@@ -117,7 +117,14 @@
                 margin-right: 5rem;
                 border-radius: 0;
                 margin-bottom: 0;
+                max-width: 400px;
+                height: 100%;
                 float: left;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
             }
         }
         .items__title,
