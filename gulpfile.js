@@ -20,7 +20,6 @@ const gulp = require('gulp'),
     imageresize = require('gulp-image-resize'),
     ghPages = require('gulp-gh-pages');
 
-
 const path = {
     build: { // пути для файлов после сборки
         html: 'build/',
@@ -31,7 +30,7 @@ const path = {
     },
     src: { // исходные файлы
         html: 'src/*.html',
-        js: 'src/js/**/*.js',
+        js: ['src/js/libs/**/*.js', 'src/js/**/*.js'],
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
