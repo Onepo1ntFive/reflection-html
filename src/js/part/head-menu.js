@@ -1,6 +1,4 @@
 (function () {
-    console.log('head-menu.js');
-
     // top menu animation
     let menuWrap = document.querySelector('.js-menu');
     let menuBtn = document.querySelector('.js-menu-btn');

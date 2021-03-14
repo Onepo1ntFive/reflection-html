@@ -1,3 +1,1 @@
-(function() {
-    console.log('main.js')
-})();
+'use strict';
