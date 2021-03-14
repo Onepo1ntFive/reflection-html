@@ -86,13 +86,13 @@ h3, .h3 {
         display: none;
     }
 }
-@media (max-width: $breakpoint-tablet) {
+@media (max-width: calc($breakpoint-desktop - 1px)) {
     .hide-on-tablet {
         display: none;
     }
 }
-@media (max-width: $breakpoint-desktop) {
-    .hide-on-deskop {
+@media (min-width: $breakpoint-desktop) {
+    .hide-on-desktop {
         display: none;
     }
 }
