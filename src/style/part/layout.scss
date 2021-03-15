@@ -12,7 +12,6 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../img/head-bg.jpg') 50% 0 no-repeat;
     background-size: auto, 100% auto;
     position: relative;
-    z-index: 1;
 
     @media (min-width: $breakpoint-tablet) {
         padding: 2rem 5rem 0;
