@@ -43,6 +43,9 @@
         border-color: $color-yellow;
         color: $color-yellow;
     }
+    a:focus {
+        outline: none;
+    }
     .filter__item {
         padding-right: 1.5rem;
     }

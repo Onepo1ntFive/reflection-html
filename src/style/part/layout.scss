@@ -10,11 +10,12 @@
 .l-header {
     padding: 2rem 1.5rem 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../img/head-bg.jpg') 50% 0 no-repeat;
-    background-size: auto, 100% auto;
+    background-size: auto, 150% auto;
     position: relative;
 
     @media (min-width: $breakpoint-tablet) {
         padding: 2rem 5rem 0;
+        background-size: auto, 100% auto;
     }
     @media (min-width: $breakpoint-desktop) {
         padding-top: 3rem;

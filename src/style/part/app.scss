@@ -81,12 +81,12 @@ h3, .h3 {
     font-family: $font-family-ruble;
 }
 /*----------*/
-@media (max-width: calc($breakpoint-tablet - 1px)) {
+@media (max-width: calc(#{$breakpoint-tablet} - 1px)) {
     .hide-on-mobile {
         display: none;
     }
 }
-@media (max-width: calc($breakpoint-desktop - 1px)) {
+@media (min-width: $breakpoint-tablet) and (max-width: calc(#{$breakpoint-desktop} - 1px)) {
     .hide-on-tablet {
         display: none;
     }
