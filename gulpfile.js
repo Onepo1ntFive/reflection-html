@@ -126,7 +126,11 @@ exports.dev = series(
 // deploy
 const deploy = () => {
     return gulp.src('./build/**/*')
-    .pipe(ghPages());
+        .pipe(ghPages());
 }
 
-exports.deploy = series(deploy);
+exports.deploy = series(
+    cleanBuild,
+    parallel(html, styles, scripts, fonts, imagesDev, imagesWebp),
+    parallel(deploy)
+);
