@@ -14,9 +14,9 @@
   "author": "SergeySolvyev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Onepo1ntFive/gulp-study/issues"
+    "url": "https://github.com/Onepo1ntFive/gulp-build/issues"
   },
-  "homepage": "https://github.com/Onepo1ntFive/gulp-study#readme",
+  "homepage": "https://github.com/Onepo1ntFive/gulp-build#readme",
   "dependencies": {
     "gulp-babel": "^8.0.0"
   },
